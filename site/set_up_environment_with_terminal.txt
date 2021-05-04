@@ -1,0 +1,178 @@
+Last login: Sat Mar 27 12:30:19 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+
+(base) Noelles-Air:~ noellewu$ git clone https://github.com/Nononoelle/coursera-test.git
+Cloning into 'coursera-test'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+Resolving deltas: 100% (1/1), done.
+(base) Noelles-Air:~ noellewu$ ls
+Applications		Movies			coursera-test
+Desktop			Music			eclipse
+Documents		Pictures		eclipse-workspace
+Downloads		Public			opt
+Jupyter			VIA			test_site
+Library			VirtualBox VMs
+(base) Noelles-Air:~ noellewu$ cd cousera-test/
+-bash: cd: cousera-test/: No such file or directory
+(base) Noelles-Air:~ noellewu$ cd coursera-test
+(base) Noelles-Air:coursera-test noellewu$ ls
+README.md
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) Noelles-Air:coursera-test noellewu$ git checkout gh-pages
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+Switched to a new branch 'gh-pages'
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+nothing to commit, working tree clean
+(base) Noelles-Air:coursera-test noellewu$ ls
+_config.yml	index.md
+(base) Noelles-Air:coursera-test noellewu$ mkdir site
+(base) Noelles-Air:coursera-test noellewu$ cd site/
+(base) Noelles-Air:site noellewu$ ls
+(base) Noelles-Air:site noellewu$ ls
+index.html
+(base) Noelles-Air:site noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) Noelles-Air:site noellewu$ cd ..
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	site/
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) Noelles-Air:coursera-test noellewu$ git .
+git: '.' is not a git command. See 'git --help'.
+
+The most similar commands are
+	a
+	c
+	d
+	l
+	s
+(base) Noelles-Air:coursera-test noellewu$ git add .
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   site/index.html
+
+(base) Noelles-Air:coursera-test noellewu$ git commit -m "My First Page."
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'noellewu@Noelles-Air.(none)')
+
+(base) Noelles-Air:coursera-test noellewu$ git config user.name "noelle"
+
+(base) Noelles-Air:coursera-test noellewu$ git config user.email "noelle.jie.wu@gmail.com"
+
+(base) Noelles-Air:coursera-test noellewu$ git commit -m "My First Page."
+[gh-pages ef7966d] My First Page.
+ 1 file changed, 10 insertions(+)
+ create mode 100644 site/index.html
+
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+(base) Noelles-Air:coursera-test noellewu$ git push 
+Username for 'https://github.com': Nononoelle
+Password for 'https://Nononoelle@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 438 bytes | 438.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Nononoelle/coursera-test.git
+   1f2b7f8..ef7966d  gh-pages -> gh-pages
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   site/index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Noelles-Air:coursera-test noellewu$ git add site/index.html
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   site/index.html
+
+(base) Noelles-Air:coursera-test noellewu$ git commit -m "Small addition to our page content."
+[gh-pages 61fbca8] Small addition to our page content.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) Noelles-Air:coursera-test noellewu$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) Noelles-Air:coursera-test noellewu$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 369 bytes | 369.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nononoelle/coursera-test.git
+   ef7966d..61fbca8  gh-pages -> gh-pages
+(base) Noelles-Air:coursera-test noellewu$ cd site/
+(base) Noelles-Air:site noellewu$ ls
+index.html
+(base) Noelles-Air:site noellewu$ browser-sync start --server --directory --files "*"
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.0.137:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Watching files...
+[Browsersync] Reloading Browsers...
