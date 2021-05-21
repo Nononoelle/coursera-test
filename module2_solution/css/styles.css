@@ -18,9 +18,7 @@
 		.menu{
   			border: 1px solid black;
   			margin: 15px;
-  			display:inline-block;
   			background-color: #AAAAAA;
-  			position:relative;
 		}
 		.option{
 			width:100px;
